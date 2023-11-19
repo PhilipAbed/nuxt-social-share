@@ -8,5 +8,12 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "enabled": true
-  }
+  },
+  "packageRules": [
+       {
+      "description": "Disable broken maven-artifact-plugin version",
+      "matchPackageNames": ["@commitlint/cli"],
+      "allowedVersions": "!/18.4.2/"
+    }
+  ]
 }
